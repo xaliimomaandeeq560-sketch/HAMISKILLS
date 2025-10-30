@@ -3,78 +3,63 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hami MiniMarket</title>
+  <title>Hami MiniMarket | Product Catalog</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header -->
+  <!-- ===== HEADER ===== -->
   <header>
-    <div class="logo"><img src="logo.png" alt="Hami MiniMarket Logo" /></div>
+    <h1>Hami MiniMarket</h1>
     <nav>
-      <a href="#hero">Home</a>
-      <a href="#products">Products</a>
       <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="#contact">Contact Us</a>
     </nav>
+    <div class="cart">
+      🛒 <span id="cart-count">0</span>
+    </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="hero" style="background-image: url('banner.jpg');">
-    <div class="hero-text">
-      <h1>Fresh. Local. Trusted.</h1>
-      <p>Your daily source for organic fruits & vegetables.</p>
-      <button class="btn">Shop Now</button>
-    </div>
+  <!-- ===== FILTERS ===== -->
+  <section class="filters">
+    <input type="text" id="search" placeholder="Search products..." />
+    <select id="category">
+      <option value="all">All Categories</option>
+      <option value="fruits">Fruits</option>
+      <option value="vegetables">Vegetables</option>
+    </select>
+    <input type="range" id="priceRange" min="0" max="10" step="0.5" value="10" />
+    <span id="priceValue">Max: $10</span>
   </section>
 
-  <!-- Product Showcase -->
-  <section id="products">
-    <h2>Our Products</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="apple.jpg" alt="Apple" />
-        <h3>Apples</h3>
-      </div>
-      <div class="card">
-        <img src="banana.jpg" alt="Banana" />
-        <h3>Bananas</h3>
-      </div>
-      <div class="card">
-        <img src="tomato.jpg" alt="Tomato" />
-        <h3>Tomatoes</h3>
-      </div>
-    </div>
+  <!-- ===== PRODUCTS ===== -->
+  <section class="products" id="product-list">
+    <!-- Products will appear here dynamically -->
   </section>
 
-  <!-- About -->
-  <section id="about">
-    <h2>About Us</h2>
-    <p>Hami MiniMarket connects our community with fresh, local, and sustainable produce at fair prices.</p>
+  <!-- ===== ABOUT SECTION ===== -->
+  <section id="about" class="info-section">
+    <h2>About Hami MiniMarket</h2>
+   <p>
+  Hami MiniMarket is an online platform that makes  it easy for you to find fresh, high-quality <br> fruits and vegetables.
+  We are committed to providing fast service and healthy products.
+</p>
   </section>
 
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <form id="contactForm">
-      <input type="text" id="name" placeholder="Your Name" required /><br></br>
-      <input type="email" id="email" placeholder="Your Email" required /><br></br>
-      <textarea id="message" placeholder="Your Message" required></textarea><br></br>
+  <!-- ===== CONTACT SECTION ===== -->
+<section id="contact" class="info-section">
+
+    <form id="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" rows="4" required></textarea>
       <button type="submit">Send Message</button>
-       
     </form>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <button id="backToTop">⬆ Back to Top</button>
-    <p>© 2025 Hami MiniMarket | Follow us on  
-      <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
-    </p>
-    
+    <p>© 2025 Hami MiniMarket. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
-
-
